@@ -1,0 +1,50 @@
+Objectives (Time spent in total 50mins):
+1. Create a query that calculates the average number of goals per game between 1900 and 2000.
+   goalscorers.csv, average goals, 1900-2000
+   Structure: date,home_team,away_team,team,scorer,minute,own_goal,penalty
+   Read year date (first 4 characters per line)
+   Split to get total goals per game, append and average
+2. Create a query that counts the number of shootouts wins by country and arrange in alphabetical order.
+   shootouts.csv, count shootout wins by country
+   Structure: date,team1,team2,winner,team1_score,team2_score
+   Count occurrences of each country in winner column, sort alphabetically, fix special characters
+3. Create a reliable key that allows the joining together of goal scorers, results, and shootouts.
+   goalscorers.csv + results.csv + shootouts.csv, reliable join key
+   Structure goalscorers: date,home_team,away_team,team,scorer,minute,own_goal,penalty
+   Structure results: date,home_team,away_team,home_score,away_score
+   Structure shootouts: date,team1,team2,winner,team1_score,team2_score
+   Create key using date + home_team + away_team for goalscorers and results
+   Create key using date + team1 + team2 for shootouts
+   - Searches in all 3 using the same key format, combines all 3
+4. Create a query that identifies which teams have won a penalty shootout after a 1-1 draw.
+   Finds all 1-1 draws from results.csv if home_score/away_score = 1
+   Stores reliable keys (from Objective 3) of those games, uses key to search in shootouts.csv
+   Joins data and which team won shootout
+5. Create a query that identifies the top goal scorer by tournament, and what percentage that equates to for all goals scored in the tournament.
+    goalscorers.csv + results.csv, top goal scorer by tournament and percentage of total goals
+    Structure goalscorers: date,home_team,away_team,team,scorer,minute,own_goal,penalty
+    Structure results: date,home_team,away_team,home_score,away_score
+    Create reliable key (from Objective 3) to join both files
+    Count total goals per tournament (date range or specific tournaments if available)
+    Count goals per player per tournament
+    Calculate percentage of total goals for top scorer in each tournament
+
+Additional (How I would go about doing it)
+1. Create an additional column that flags records with data quality issues
+  - Ran out of the hour, but I would check each file for:
+    - Missing values in critical fields (e.g., date, team names, scores)
+    - Inconsistent formatting (e.g., date formats, team name spellings)
+    - Out-of-range values (e.g., negative scores, impossible dates)
+    - Add column saying "data_quality_issue" with True/False
+2. Resolve the identified quality issues
+    - After flagging the data, clean and standardise the csvs, risky unless confident
+    - Would take trial and error
+
+
+Issues/thoughts:
+- Not OOP as too simple and is only using 1 file
+- Objective 1: No experience with csv files, did look up
+- Objective 2: Å characters were perceived different to A (and appeared at the end), changed so Å is treated as A
+- Objective 3: Not much experience with CSV joins, did look up how to
+- Objective 4: A lot easier after understanding Objective 3
+- Objective 5: player NA, Oceana Nations Cup did not have data in goalscorers.csv, data quality issue, probably scorer field is missing or contains (NA)
