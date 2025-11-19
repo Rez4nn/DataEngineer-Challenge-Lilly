@@ -1,9 +1,9 @@
 # Data Engineer Challenge
 ***Candidate Information:***
-**- How I went about doing it is in "Process" file.**
-**- Time spent: ~50mins**
-**- Did use the internet for CSV information and Objective 3 (info carried over into objective 4 & 5)**
-**- Candidate initials: RN**
+* How I went about doing it is in "Process" file
+* Time spent: ~50mins
+* Did use the internet for CSV information and Objective 3 (info carried over into objective 4 & 5)
+* Candidate initials: RN
 
 ## Introduction
 The following tasks are to test the basic skillset of a data engineer.
