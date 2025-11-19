@@ -1,4 +1,10 @@
 # Data Engineer Challenge
+***Candidate Information:***
+**- How I went about doing it is in "Process" file.**
+**- Time spent: ~50mins**
+**- Did use the internet for CSV information and Objective 3 (info carried over into objective 4 & 5)**
+**- Candidate initials: RN**
+
 ## Introduction
 The following tasks are to test the basic skillset of a data engineer.
 You aren’t expected to spend more than 30-60 minutes on this task (we respect your time).
@@ -12,14 +18,14 @@ git clone https://github.com/Sampuddy/DataEngineer-Challenge-master.git
 * Add your answers to this file: https://github.com/Sampuddy/DataEngineer-Challenge-master/blob/main/answers
 * Once complete, push your repo, create a Public URL and share with Becky Mears.
 
-## Objectives
+## Objectives (Completed)
 1. Create a query that calculates the average number of goals per game between 1900 and 2000.
 2. Create a query that counts the number of shootouts wins by country and arrange in alphabetical order.
 3. Create a reliable key that allows the joining together of goal scorers, results, and shootouts.
 4. Create a query that identifies which teams have won a penalty shootout after a 1-1 draw.
 5. Create a query that identifies the top goal scorer by tournament, and what percentage that equates to for all goals scored in the tournament.
 
-Additional (If you have time)
+Additional (Not completed due to time, but devised how to)
 1. Create and additional column that flags records with data quality issues
 2. Resolve the identified quality issues
 
